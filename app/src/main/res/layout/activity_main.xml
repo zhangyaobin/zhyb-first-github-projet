@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/layout_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               >
+
+                <RelativeLayout
+                    android:id="@+id/sound_delete_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible">
+
+                    <Button
+                        android:id="@+id/sound_show"
+                        style="@style/SoundBtnStyle"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="35dp" />
+
+                    <ImageView
+                        android:id="@+id/sound_delete"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/sound_show"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/sound_show"
+                        android:layout_marginRight="20dp"
+                        android:scaleType="center"
+                        android:src="@drawable/image_delete" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/sound_mic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sound_delete_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="150dp"
+                    android:src="@drawable/btn_sound_mic" />
+
+                <TextView
+                    style="@style/TextStyleEd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sound_mic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:text="按住麦克风录制语音介绍" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/sound_recording"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:scaleType="center"
+                android:src="@anim/sound_recording"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
